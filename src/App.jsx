@@ -109,6 +109,5 @@ function App() {
       {cartOpen && <button className="overlay" onClick={() => setCartOpen(false)} aria-label="Fechar sacola" />}
     </div>
   )
-}
 
-export default App
+export default App;
