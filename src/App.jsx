@@ -8,8 +8,8 @@ import {
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ProductCard from "./components/ProductCard";
-import OrderForm from "./components/OrderForm";
 import { products } from "./data/products";
+import Form from "./pages/Form/Form";
 
 function App() {
   const [activeCategory, setActiveCategory] = useState("Todos");
@@ -200,14 +200,8 @@ function App() {
               </p>
             </div>
           </div>
-          <OrderForm
-            products={products}
-            cart={cart}
-            onSuccess={() => {
-              setCart([]);
-              setNotice("Pedido recebido! Em breve confirmaremos por e-mail.");
-            }}
-          />
+
+          <Form />
         </section>
       </main>
 
