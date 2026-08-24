@@ -1,16 +1,9 @@
-import { z } from "zod";
+import { z } from 'zod'
 
-export const schema = z.object({
-  nome: z.string().min(3, "O nome deve ter pelo menos 3 caracteres"),
-
-  email: z.string().email("Digite um e-mail válido"),
-
-  idade: z
-
-    .number({ invalid_type_error: "A idade deve ser maior que um número" })
-    .min(16, "A idade mínima é 16 anos."),
-
-  senha: z.string().min(6, "A senha deve ter pelo menos 6 caracteres"),
-
-  telefone: z.string().min(10, "Digite um número de telefone válido."),
-});
+export const orderSchema = z.object({
+  name: z.string().trim().min(3, 'Digite um nome com pelo menos 3 caracteres.'),
+  email: z.string().trim().email('Informe um e-mail válido.'),
+  phone: z.string().trim().min(10, 'Digite um telefone válido com DDD.'),
+  item: z.string().min(1, 'Escolha um item do cardápio.'),
+  pickupTime: z.string().min(1, 'Selecione um horário para retirada.'),
+})

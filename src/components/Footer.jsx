@@ -1,0 +1,3 @@
+import { FiInstagram, FiMapPin, FiMail } from 'react-icons/fi'
+const Footer = () => <footer><div className="footer-top"><a className="brand footer-brand" href="#inicio"><span>cb</span> cafébear</a><p>Café, companhia e pequenos rituais para deixar o dia mais leve.</p><div className="socials"><a href="#inicio" aria-label="Instagram"><FiInstagram /></a><a href="#pedido" aria-label="E-mail"><FiMail /></a><a href="#sobre" aria-label="Endereço"><FiMapPin /></a></div></div><div className="footer-bottom"><span>© 2026 CaféBear. feito com calma.</span><span>São Paulo · Brasil</span></div></footer>
+export default Footer
