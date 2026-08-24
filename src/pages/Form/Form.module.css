@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  z-index: -1;
+  background: url("../../assets/coffe.jpg") center / cover no-repeat;
+  filter: blur(5px);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 0.75rem;
+  width: min(100%, 360px);
+  background: linear-gradient(180deg, #7e5021, #8f5e1b);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+  width: 100%;
+  font-size: 12px;
+}
+
+.input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  border: 1px solid #bc8c3e;
+  box-shadow: 0 2px 8px rgba(10, 10, 10, 0.12);
+  height: 25px;
+  font-size: 10px;
+}
+
+.input::placeholder {
+  color: #e0dada;
+}
+.input:focus {
+  outline: none;
+  border-color: #eba941;
+  box-shadow: 0 0 0 2px rgba(110, 90, 14, 0.25);
+}
+
+.inputError {
+  border-color: #b42318;
+  box-shadow: 0 0 0 2px rgba(180, 35, 24, 0.18);
+}
+
+.error {
+  margin-top: 0.25rem;
+  color: #7a1313;
+  font-size: 8px;
+  font-weight: 500;
+}
+
+.success {
+  margin-top: 0.75rem;
+  color: #063b15;
+  font-size: 10px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.submit {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: #1eae51;
+  color: #f1e8e8;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 3px 12px rgba(10, 10, 10, 0.16);
+  transition: ease-in-out 0.3s;
+  height: 40px;
+}
+
+.submit:hover {
+  background-color: #076f0c;
+}
+
+@media (max-width: 668px) {
+  .container {
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .form {
+    padding: 1.5rem 1rem;
+  }
+}
