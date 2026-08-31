@@ -147,7 +147,7 @@ const Form = () => {
 
       <input className={styles.submit} type="submit" value="Enviar" />
       {enviado && (
-        <p className={styles.success}>Formulário enviado com sucesso!</p>
+        <p className={styles.success}>Obrigado por comprar conosco ☺</p>
       )}
     </form>
   );
